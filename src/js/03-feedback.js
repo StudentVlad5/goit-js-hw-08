@@ -19,6 +19,7 @@ function saveInput () {
 if(JSON.parse(localStorage.getItem('feedback-form-state'))){
     ref.inputTypeTextarea.value = JSON.parse(localStorage.getItem('feedback-form-state')).message;
     ref.inputTypeEmail.value = JSON.parse(localStorage.getItem('feedback-form-state')).email;
+    saveInput()
 }
 
 ref.buttonSubmit.addEventListener('click', newForm)

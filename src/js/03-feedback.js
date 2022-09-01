@@ -10,7 +10,6 @@ ref.inputTypeEmail.addEventListener('input',throttle(saveInput,500))
 ref.inputTypeTextarea.addEventListener('input',throttle(saveInput,500))
 
 function saveInput () {
-
     obj.message = ref.inputTypeTextarea.value;
     obj.email = ref.inputTypeEmail.value;
     localStorage.setItem('feedback-form-state', JSON.stringify(obj));
@@ -31,5 +30,4 @@ e.preventDefault();
 localStorage.clear('feedback-form-state');
 ref.inputTypeEmail.value = '';
 ref.inputTypeTextarea.value = '';
-
 }

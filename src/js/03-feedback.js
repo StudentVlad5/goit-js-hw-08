@@ -4,7 +4,7 @@ inputTypeTextarea: document.querySelector('textarea'),
 buttonSubmit: document.querySelector('button'),
 };
 const obj = {};
-var throttle = require('lodash.throttle');
+let throttle = require('lodash.throttle');
 
 ref.inputTypeEmail.addEventListener('input',throttle(saveInput,500))
 ref.inputTypeTextarea.addEventListener('input',throttle(saveInput,500))

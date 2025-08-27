@@ -72,12 +72,13 @@ const galleryContainer = document.querySelector(".gallery");
 const gallery = images.reduce(
   (galerryContent, { preview, original, description }) => {
     return (galerryContent += `<li class="gallery-item">
-    <img
+      <a class="gallery-link" href="large-image.jpg">
+      <img
       class="gallery-image"
       src="${preview}"
       data-source="${original}"
       alt="Image ${description}"
-    />
+    /></a>
 </li>`);
   },
   ""

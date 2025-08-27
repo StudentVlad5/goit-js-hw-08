@@ -98,7 +98,7 @@ function openImage(event) {
   const imageForModal = `
     <div class="modal">
       <button class="close-btn">&times;</button>
-      <img src="${event.target.dataset.source}" style="width:80vw; height:80vh; object-fit:contain;" />
+      <img src="${event.target.dataset.source}" style="width:80vw; height:80vh; object-fit:cover;" />
     </div>`;
 
   const instance = basicLightbox.create(imageForModal, {

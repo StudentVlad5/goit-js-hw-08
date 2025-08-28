@@ -72,12 +72,12 @@ const galleryContainer = document.querySelector(".gallery");
 const gallery = images.reduce(
   (galerryContent, { preview, original, description }) => {
     return (galerryContent += `<li class="gallery-item">
-      <a class="gallery-link" href="large-image.jpg">
+      <a class="gallery-link" href="${original}">
       <img
       class="gallery-image"
       src="${preview}"
       data-source="${original}"
-      alt="Image ${description}"
+      alt="${description}"
     /></a>
 </li>`);
   },
@@ -88,8 +88,6 @@ const gallery = images.reduce(
 if (gallery) galleryContainer.insertAdjacentHTML("beforeend", gallery);
 
 // додаємо прослуховувач подій
-
-const imageContainer = document.querySelector("#image");
 
 function openImage(event) {
   event.preventDefault();
